@@ -37,7 +37,7 @@ module.exports = {
     return send({ to, subject, html });
   },
   async thank(submission, { req }) {
-    const subject = 'Your requested updates have been recieved';
+    const subject = 'Your requested updates have been received';
     const html = await render('thankYou', { ...common, uri: `http://${req.get('host')}`, submission });
     const { name, email } = submission;
     const to = `${name} <${email}>`;
